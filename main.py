@@ -1,6 +1,9 @@
-import spacy
-from spacy import displacy
+from flask import Flask, render_template
 
-nlp = spacy.load("en_core_web_sm")
-doc = nlp("")
-displacy.serve(doc, style="ent")
+app = Flask(__name__)
+
+def index():
+    return render_template('index.html')
+
+if __name__ == '__main__':
+    app.run()
