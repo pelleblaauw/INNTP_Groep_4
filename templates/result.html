@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <title>Zoekmachine Justitie</title>
 </head>
@@ -12,11 +12,9 @@
     <a href="/"> AI Zoekmachine voor Justitiele Documenten </a>
     </div>
 
-    <div class="zoekbalk">
-        <form action="/result">
-    <input type="search" id="zoekbalk" placeholder="Vul trefwoorden in...">
-    <button type="submit" id="submit" action="result.php"> Zoeken </button>
-        </form>
+    <div class="resultaten">
+    <h2> Uw resultaten zijn:</h2>
+    <a href="/">Terug </a>
     </div>
 </body>
 

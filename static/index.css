@@ -1,0 +1,19 @@
+a {
+    text-decoration: none;
+}
+
+.header {
+    text-align: center;
+    font-size: x-large;
+}
+
+.zoekbalk {
+    width: 100%;
+    text-align: center;
+}
+
+.zoekbalk input {
+    width: 600px;
+    height: 30px;
+    margin-top: 30px;
+}
