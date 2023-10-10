@@ -3,6 +3,10 @@
     font-size: x-large;
 }
 
+a {
+    text-decoration: none;
+}
+
 .resultaten {
     width: 100%;
     text-align: center;
