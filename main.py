@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template, send_from_directory, request
 
 app = Flask(__name__)
 
@@ -12,6 +12,7 @@ def index():
 
 @app.route('/result')
 def result():
+    query_string = request.query_string
     return render_template('result.html')
 
 @app.route('/favicon.ico')
