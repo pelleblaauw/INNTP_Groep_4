@@ -1,16 +1,4 @@
-<!DOCTYPE HTML>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <title>Zoekmachine Justitie</title>
-</head>
-
-<body>
-    <div class="header">
-    <a href="/"> AI Zoekmachine voor Justitiele Documenten </a>
-    </div>
+{% include 'header.html' %}
 
     <div class="zoekbalk">
         <form action="/result">
