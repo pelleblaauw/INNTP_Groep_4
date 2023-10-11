@@ -12,8 +12,8 @@ def index():
 
 @app.route('/result')
 def result():
-    query_string = request.query_string
-    return render_template('result.html')
+    query_string = request.args.get('query')
+    return render_template('result.html', query=query_string)
 
 @app.route('/favicon.ico')
 def fav():

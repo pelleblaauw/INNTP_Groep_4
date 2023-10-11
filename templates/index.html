@@ -1,8 +1,8 @@
 {% include 'header.html' %}
 
     <div class="zoekbalk">
-        <form action="/result">
-    <input type="search" id="zoekbalk" placeholder="Vul trefwoorden in...">
+        <form action="/result" method="GET">
+    <input type="search" id="zoekbalk" name="query" placeholder="Vul trefwoorden in...">
     <button type="submit" id="submit" action="result.php"> Zoeken </button>
         </form>
     </div>
