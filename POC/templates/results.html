@@ -1,0 +1,98 @@
+    {% include 'header.html' %}
+
+    <div class="zoekbalk">
+        <form action="/search" method="POST">
+    <input type="search" id="search_term" name="search_term" placeholder="Vul trefwoorden in..." required>
+    <button type="submit" id="submitbutton"> Zoeken </button>
+        </form>
+    </div>
+
+ 
+
+    {% if synonyms_list %}
+    <div class="synonyms">
+    <h2>Synoniemen:</h2>
+    <ul class="synonyms-list">
+        {% for synonym in synonyms_list %}
+        <li>{{ synonym }}</li>
+        {% endfor %}
+    </ul>
+</div>
+    {% endif %}
+
+    <!-- Include the dependency parsing visualization -->
+{% if dep_parsing_html %}
+<div class="dependency-parsing">
+    <h2>Dependency Parsing Visualization:</h2>
+    {{ dep_parsing_html|safe }}
+</div>
+{% endif %}
+
+
+    {% if matching_results_list %}
+    <div class="resultaten">
+        <h2> Uw resultaten zijn:</h2>
+        <a href="/">Terug </a>
+        </div>
+        <div class="container">
+
+        <div class="legend">
+            <h2>Legenda:</h2>
+            <ul class="legend-list">
+                <li><span id="legend-person" class="legend-color"></span>Personen</li>
+                <li><span id="legend-event" class="legend-color"></span>Gebeurtenissen</li>
+                <li><span id="legend-date" class="legend-color"></span>Tijdsuitdrukkingen</li>
+                <li><span id="legend-gpe" class= "legend-color"></span>Geografische locaties</li>
+                <li><span id="legend-work-of-art" class="legend-color"></span>Kunstwerken</li>
+                <li><span id="legend-norp" class="legend-color"></span>Nationaliteiten of Religieuze of Politieke Groepen</li>
+                <li><span id="legend-cardinal" class="legend-color"></span>Getallen</li>
+                <li><span id="legend-org" class="legend-color"></span>Organisaties</li>
+            </ul>
+        </div>
+        </div>
+    <ul>
+        {% for result in matching_results_list %}
+        <li>
+            <strong>{{ result[1] }}</strong> (Score: {{ result[5] }})<br>
+            Toegewezen: {{ result[2] }}<br>
+            Overeenkomende sleutelwoorden:
+            <ul class="keyword-list">
+                {% for keyword in result[3] %}
+                <li>{{ keyword }}</li>
+                {% endfor %}
+            </ul>
+            Benoemde entiteiten:
+    <ul class="named-entities-list">
+        {% for entity_text, entity_label in result[6] %}
+        <li id="{{ entity_label }}">{{ entity_text }}</li>
+        
+        {% endfor %}
+    </ul>
+            Samenvatting: {{ result[4] }}<br>
+            <form method="POST" action="/feedback">
+                <input type="hidden" name="search_term" value="{{ search_term }}">
+               
+                <input type="hidden" name="matching_keywords" value="{{ result[3] | join(', ') }}">
+                <input type="hidden" name="summary" value="{{ result[4] }}">
+                <label for="feedback">Is deze zoekresultaat relevant?</label>
+                <input type="radio" name="feedback" value="Yes" required> Ja
+                <input type="radio" name="feedback" value="No" required> Nee
+                <input type="submit" value="Feedback inzenden">
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No results found.</p>
+    {% endif %}
+
+    <!-- Add Next and Previous buttons with search_term parameter -->
+{% if has_prev_page %}
+<a href="{{ url_for('search', search_term=search_term, page=page-1) }}">Previous</a>
+{% endif %}
+
+{% if has_next_page %}
+<a href="{{ url_for('search', search_term=search_term, page=page+1) }}">Next</a>
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,322 @@
+a {
+    text-decoration: none;
+}
+
+.header {
+    text-align: center;
+    font-size: x-large;
+}
+
+.zoekbalk {
+    width: 100%;
+    text-align: center;
+}
+
+.zoekbalk input {
+    width: 600px;
+    height: 30px;
+    margin-top: 30px;
+}
+
+.resultaten {
+    width: 100%;
+    text-align: center;
+}
+
+.zoekbalk {
+    text-align: center;
+    margin-top: 20px;
+}
+#search_term {
+    width: 60%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#submitbutton {
+    background-color: #154273;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#submitbutton:hover {
+    background-color: #154273;
+}
+
+/* Style the synonyms list */
+.synonyms {
+    margin-top: 20px;
+    text-align: center;
+}
+.synonyms-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: center;
+}
+.synonyms-list li {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+
+}
+
+.keyword-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+.keyword-list li {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+/* Style the result list */
+.resultaten {
+    margin-top: 20px;
+    text-align: center;
+}
+.resultaten a {
+    text-decoration: none;
+    color: #154273;
+    font-weight: bold;
+}
+.resultaten h2 {
+    font-size: 24px;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+li strong {
+    font-size: 18px;
+}
+li ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li ul li {
+    font-size: 14px;
+}
+
+/* Style feedback form */
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+form label {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+}
+form input[type="radio"] {
+    margin-right: 10px;
+}
+form input[type="submit"] {
+    background-color: #154273;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 12px;
+}
+form input[type="submit"]:hover {
+    background-color: #154273;
+}
+
+.dependency-parsing {
+    padding: 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.dependency-parsing h2 {
+    color: #333;
+    font-size: 20px;
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.named-entities-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    font-weight: bold;
+}
+.named-entities-list li {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#PERSON {
+    background-color: #FFC857; /* Yellow */
+    color: #333; /* Dark text on a yellow background */
+}
+
+#EVENT {
+    background-color: #A23B72; /* Purple */
+    color: #FFF; /* White text on a purple background */
+}
+
+#DATE {
+    background-color: #F3722C; /* Orange */
+    color: #FFF; /* White text on an orange background */
+}
+
+#GPE {
+    background-color: #81B214; /* Green */
+    color: #333; /* Dark text on a green background */
+}
+
+#WORK_OF_ART {
+    background-color: #48A9A6; /* Teal */
+    color: #FFF; /* White text on a teal background */
+}
+
+#NORP {
+    background-color: #6A0572; /* Dark Purple */
+    color: #FFF; /* White text on a dark purple background */
+}
+
+#CARDINAL {
+    background-color: #FF6B6B; /* Red */
+    color: #FFF; /* White text on a red background */
+}
+
+#ORG {
+    background-color: #005E7D; /* Dark Blue */
+    color: #FFF; /* White text on a dark blue background */
+}
+
+.legend-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.legend {
+    flex: 0 1 calc(25% - 20px); /* Adjust the width as needed */
+    margin: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.legend h2 {
+    font-size: 20px;
+    color: #154273;
+}
+
+.legend-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.legend-list li {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+/* Individual entity styles */
+#legend-person {
+    background-color: #FFC857; /* Yellow */
+}
+
+#legend-event {
+    background-color: #A23B72; /* Purple */
+    color: #FFF;
+}
+
+#legend-date {
+    background-color: #F3722C; /* Orange */
+    color: #FFF;
+}
+
+#legend-gpe {
+    background-color: #81B214; /* Green */
+    color: #333;
+}
+
+#legend-work-of-art {
+    background-color: #48A9A6; /* Teal */
+    color: #FFF;
+}
+
+#legend-norp {
+    background-color: #6A0572; /* Dark Purple */
+    color: #FFF;
+}
+
+#legend-cardinal {
+    background-color: #FF6B6B; /* Red */
+    color: #FFF;
+}
+
+#legend-org {
+    background-color: #005E7D; /* Dark Blue */
+    color: #FFF;
+}
+
+.legend ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.legend li {
+    margin: 5px;
+    padding: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
