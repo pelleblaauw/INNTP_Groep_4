@@ -1,0 +1,147 @@
+a {
+    text-decoration: none;
+}
+
+.header {
+    text-align: center;
+    font-size: x-large;
+}
+
+.zoekbalk {
+    width: 100%;
+    text-align: center;
+}
+
+.zoekbalk input {
+    width: 600px;
+    height: 30px;
+    margin-top: 30px;
+}
+
+.resultaten {
+    width: 100%;
+    text-align: center;
+}
+
+.zoekbalk {
+    text-align: center;
+    margin-top: 20px;
+}
+#search_term {
+    width: 60%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#submitbutton {
+    background-color: #154273;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#submitbutton:hover {
+    background-color: #154273;
+}
+
+/* Style the synonyms list */
+.synonyms {
+    margin-top: 20px;
+    text-align: center;
+}
+.synonyms-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+.synonyms-list li {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.keyword-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+.keyword-list li {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+/* Style the result list */
+.resultaten {
+    margin-top: 20px;
+    text-align: center;
+}
+.resultaten a {
+    text-decoration: none;
+    color: #154273;
+    font-weight: bold;
+}
+.resultaten h2 {
+    font-size: 24px;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+li strong {
+    font-size: 18px;
+}
+li ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li ul li {
+    font-size: 14px;
+}
+
+/* Style feedback form */
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+form label {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+}
+form input[type="radio"] {
+    margin-right: 10px;
+}
+form input[type="submit"] {
+    background-color: #154273;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 12px;
+}
+form input[type="submit"]:hover {
+    background-color: #154273;
+}
